@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-bottom: 2px solid #ddd;
+            position: relative;
+        }
+        .section h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0); /* Hidden by default */
+            background-color: rgba(255, 255, 255, 0.9); /* Translucent popup */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            transition: transform 0.3s ease; /* Opening transition */
+        }
+        .popup p {
+            margin-bottom: 10px; /* Add some space below the text */
+            color: #000; /* Text color in popup */
+        }
+        .popup .close-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #000; /* Color of close button */
+        }
+        .popup.show {
+            transform: translate(-50%, -50%) scale(1); /* Show popup */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+    </header>
+    <div class="container">
+        <section class="section" style="background-color: #ff9999;">
+            <h2>Introduction</h2>
+            <hr style="border-color: #ddd; cursor: pointer;" onclick="showPopup()">
+            <p>Hi, I'm Muhammad Taezeem Tariq Matta, a 13-year-old coding & hacking enthusiast from SRM Welkin Higher Secondary School, Sopore. Welcome to my website.</p>
+        </section>
+        <section class="section" style="background-color: #99ccff;">
+            <h2>Grade and Section</h2>
+            <p>I'm currently in Grade 6, Section Rose.</p>
+        </section>
+        <section class="section" style="background-color: #66ff66;">
+            <!-- Grey line -->
+            <h2>Hobbies</h2>
+            <hr style="border-color: #ddd; cursor: pointer;" onclick="showPopup()">
+            <p>Aside from coding and hacking, I enjoy exploring new technologies, playing video games, and experimenting with CSS to create cool website designs!</p>
+        </section>
+        <section class="section" style="background-color: #ffff66;">
+            <h2>Skills</h2>
+            <p>I'm proficient in HTML and CSS, and I can build websites from scratch. Additionally, I have a keen interest in cybersecurity and ethical hacking. I enjoy exploring systems, pages, and websites to understand their vulnerabilities and enhance their security.</p>
+        </section>
+        <section class="section" style="background-color: #ff9966;">
+            <h2>Other Interests</h2>
+            <hr style="border-color: #ddd; cursor: pointer;" onclick="showPopup()">
+            <p>In addition to coding and hacking, I also enjoy reading science fiction novels and experimenting with new recipes in the kitchen.</p>
+        </section>
+    </div>
+
+    <!-- Welcome popup -->
+    <div class="popup" id="welcomePopup">
+        <p>Welcome to My Website</p>
+        <!-- Close button -->
+        <button class="close-button" onclick="hideWelcomePopup()">×</button>
+    </div>
+
+    <!-- Anime popup -->
+    <div class="popup" id="animePopup">
+        <p>Psst... I also watch anime!</p>
+        <!-- Close button -->
+        <button class="close-button" onclick="hideAnimePopup()">×</button>
+    </div>
+
+    <script>
+        // Welcome popup
+        window.onload = function() {
+            document.getElementById("welcomePopup").classList.add("show");
+        }
+
+        function hideWelcomePopup() {
+            document.getElementById("welcomePopup").classList.remove("show");
+        }
+
+        // Anime popup
+        function showPopup() {
+            document.getElementById("animePopup").classList.add("show");
+        }
+
+        function hideAnimePopup() {
+            document.getElementById("animePopup").classList.remove("show");
+        }
+    </script>
+</body>
+</html>
