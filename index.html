@@ -1,0 +1,193 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Taezeem Tariq Matta</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background: #fdfdfd;
+      --foreground: #121212;
+      --card: #ffffff;
+      --border: #e0e0e0;
+      --accent: #007bff;
+      --shadow: rgba(0, 0, 0, 0.05);
+    }
+
+    [data-theme='dark'] {
+      --background: #1b1b1b;
+      --foreground: #eaeaea;
+      --card: #252525;
+      --border: #333;
+      --accent: #1e90ff;
+      --shadow: rgba(255, 255, 255, 0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: var(--background);
+      color: var(--foreground);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+  background: var(--accent);
+  color: white;
+  padding: 60px 0 40px;
+  text-align: center;
+  position: relative; /* <-- This anchors the absolute button correctly */
+}
+    header h1 {
+      font-size: 2.6rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    .theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  z-index: 1000;
+}
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 8px var(--shadow);
+    }
+
+    .section h2 {
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+      font-weight: 500;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 6px;
+    }
+
+    .section p {
+      font-size: 1.05rem;
+      color: var(--foreground);
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 0.95rem;
+      color: #999;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .section {
+        padding: 20px;
+      }
+
+      .theme-toggle {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle 🌗</button>
+   <h1>Muhammad Taezeem Tariq Matta</h1>
+    <p>Student · Web Developer · Cybersecurity Enthusiast</p>
+   </header>
+	
+  <main class="container">
+    <section class="section">
+      <h2>Introduction</h2>
+      <p>Hello! I'm a student at SRM Welkin Higher Secondary School, Sopore. I am passionate about coding, web development, and ethical hacking. This website is a personal portfolio where I showcase my learning journey and technical growth.</p>
+    </section>
+
+    <section class="section">
+      <h2>Current Academic Status</h2>
+      <p id="gradeText">Loading current grade...</p>
+    </section>
+
+    <section class="section">
+      <h2>Hobbies</h2>
+      <p>Outside of coding and security, I enjoy reading science fiction, gaming, designing user interfaces, and exploring technology trends. I also occasionally experiment with animation and interactivity using JavaScript and CSS.</p>
+    </section>
+
+    <section class="section">
+      <h2>Skills</h2>
+      <p>I am proficient in HTML and CSS, with a strong interest in cybersecurity. I enjoy analyzing web pages for vulnerabilities and building safe, fast, and responsive websites from the ground up.</p>
+    </section>
+
+    <section class="section">
+      <h2>Other Interests</h2>
+      <p>I’m curious about artificial intelligence, game development, and how systems work under the hood. I often dive into online learning platforms to expand my skills and challenge myself with ethical hacking labs.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Muhammad Taezeem Tariq Matta • All rights reserved
+  </footer>
+
+  <script>
+    // Auto-grade update
+    const baseYear = 2024;
+    const currentYear = new Date().getFullYear();
+    const calculatedGrade = 6 + (currentYear - baseYear);
+    const gradeSection = "Section Rose";
+    const gradeText = calculatedGrade > 12
+      ? "I studied at SRM Welkin Higher Secondary School, Sopore."
+      : `I'm currently in Grade ${calculatedGrade}, ${gradeSection}.`;
+    document.getElementById("gradeText").textContent = gradeText;
+
+    // Theme logic
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme === "dark") {
+      document.body.setAttribute("data-theme", "dark");
+    }
+
+    function toggleTheme() {
+      const isDark = document.body.getAttribute("data-theme") === "dark";
+      if (isDark) {
+        document.body.removeAttribute("data-theme");
+        localStorage.setItem("theme", "light");
+      } else {
+        document.body.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
+      }
+    }
+  </script>
+</body>
+</html>
