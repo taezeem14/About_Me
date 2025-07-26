@@ -10,7 +10,7 @@ This site showcases my technical journey, web development skills, and passion fo
 ## 🌐 Live Preview
 
 > Hosted at:  
-**https://taezeem14.github.io/About_Me**
+**https://taezeem14.github.io/Me**
 
 ---
 
