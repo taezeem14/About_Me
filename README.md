@@ -10,7 +10,7 @@ This site showcases my technical journey, web development skills, and passion fo
 ## 🌐 Live Preview
 
 > Hosted at:  
-**https://prixe.tech**
+**https://taezeem14.github.io/About_Me**
 
 ---
 
@@ -28,14 +28,14 @@ This site showcases my technical journey, web development skills, and passion fo
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/your-username/me.git
+   git clone https://github.com/taezeem14/About_Me.git
    ```
 
 2. **Open in your browser**  
-   Double-click `Me.html` or drag it into a browser window.
+   Double-click `index.html` or drag it into a browser window.
 
 3. **Customize the content**  
-   Edit `Me.html` in any text editor to update sections, skills, or style.
+   Edit `index.html` in any text editor to update sections, skills, or style.
 
 ---
 
